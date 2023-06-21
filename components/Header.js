@@ -1,6 +1,5 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import useImageLoading from '../utils/imageLoadingUtils';
-import useNavigation from "@/utils/navigationUtils";
 
 // components
 import LoadingDiv from "./LoadingDiv";
@@ -8,9 +7,6 @@ import LoadingDiv from "./LoadingDiv";
 // images/icons
 import { Icon, enableCache } from '@iconify/react';
 enableCache('local');
-
-// create a new context
-export const HeaderContext = createContext();
 
 const Header = (props) => {
 
@@ -36,12 +32,10 @@ const Header = (props) => {
     // if page is changing set the fadeout animation
     const exitClass = "background-img animate__animated animate__fadeOut";
     const hoverClass = "animate__animated animate__pulse animate__infinite";
-    // !destructure helper function
-    const { handleNavigate } = useNavigation();
 
     return (
-        <HeaderContext.Provider value={props} className="header-component">
-            <img className="header-shape" src={"/img/header-shape.svg"} alt="Red Arch to enhance design" />
+        <header className="header-component">
+            <img className="header-shape" src="/img/header-shape.svg" alt="Red Arch to enhance design" />
 
             {isImageLoaded ? null : <LoadingDiv />}
 
@@ -50,7 +44,7 @@ const Header = (props) => {
             <div className="header-content">
 
 
-                <button onClick={() => handleNavigate('/')}
+                <button onClick={() => props.handleNavigate('/')}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 className={`h1-header jrb-button ${isHovered ? hoverClass : ""}`}>
@@ -67,15 +61,15 @@ const Header = (props) => {
                     id='dropdown-nav'
                     className={`nav-bar ${isNavCollapsed ? 'collapsed dropdown-nav-hidden' : 'dropdown-nav-visible'}`}>
 
-                    <button onClick={() => handleNavigate('/about_us')} className="subheading-text nav-btn">About Us</button>
+                    <button onClick={() => props.handleNavigate('/about_us')} className="subheading-text nav-btn">About Us</button>
 
-                    <button onClick={() => handleNavigate('/jesses_story')} className="subheading-text nav-btn">Jesse's Story</button>
+                    <button onClick={() => props.handleNavigate('/jesses_story')} className="subheading-text nav-btn">Jesse's Story</button>
 
-                    <button onClick={() => handleNavigate('/strep_a_awareness')} className="subheading-text nav-btn">Strep A Awareness</button>
+                    <button onClick={() => props.handleNavigate('/strep_a_awareness')} className="subheading-text nav-btn">Strep A Awareness</button>
 
-                    <button onClick={() => handleNavigate('/contact_us')} className="subheading-text nav-btn">Contact Us</button>
+                    <button onClick={() => props.handleNavigate('/contact_us')} className="subheading-text nav-btn">Contact Us</button>
 
-                    <button onClick={() => handleNavigate('/donations')} className="subheading-text nav-btn">Donations</button>
+                    <button onClick={() => props.handleNavigate('/donations')} className="subheading-text nav-btn">Donations</button>
                 </nav>
                 <div className="header-subtext tagline-container">
                     <p className="header-tagline">
@@ -85,7 +79,7 @@ const Header = (props) => {
                     </p>
                 </div>
             </div>
-        </HeaderContext.Provider>
+        </header>
     )
 }
 
