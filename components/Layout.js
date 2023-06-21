@@ -1,9 +1,12 @@
 import React from "react";
 
+// import components
+import Header from "./Header";
+
 const Layout = ({children}) => {
 return(
     <>
-    // import Header
+    <Header />
     {children}
     // import Footer
     </>

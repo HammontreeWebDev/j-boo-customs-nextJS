@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
+// css libraries
+import 'animate.css';
+
 // css files
 import "../styles/index.css";
 import "../styles/contact-info.css";
