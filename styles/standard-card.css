@@ -1,0 +1,8 @@
+.card-container{
+    border: 3px solid var(--white);
+    background-color: var(--black);
+}
+
+.card-title, .standard-text-body{
+    padding: 0% 2% 0% 2%;
+}

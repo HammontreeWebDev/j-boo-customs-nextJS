@@ -1,0 +1,11 @@
+.title-text {
+    text-align: center;
+    margin-top: 0;
+    padding: 1%;
+}
+.green-text {
+    color: var(--light-green);
+}
+.page-title-bg {
+    background-color: var(--black);
+}

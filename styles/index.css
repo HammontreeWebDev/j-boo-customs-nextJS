@@ -1,0 +1,136 @@
+/* set variables */
+/* TODO: set main margin to "margin: 0% 5% 0% 5%;"  */
+
+/* ! Note that most of the media queries for global classes are located in the header.css file */
+
+:root {
+
+  /* *Color Scheme */
+
+  --dark-blue: #1A50A1;
+  --light-blue: #0E67ED;
+  --dark-green: #7BA102;
+  --light-green: #BEED26;
+  --orange: #ED3E26;
+  --black: #121314;
+  --white: #FFFFFF;
+
+  /* *Gradients */
+  --vertical-blue-to-black: linear-gradient(to bottom, var(--dark-blue), var(--black));
+  --vertical-blue-to-black-trans: linear-gradient(to bottom, var(--dark-blue), rgba(0, 0, 0, .7));
+
+
+  /* *transparent colors */
+  --dark-blue-trans: rgba(26, 80, 161, .5);
+
+  /* *Fonts */
+  --Acme: 'Acme', sans-serif;
+  --Athiti: 'Athiti', sans-serif;
+
+}
+
+/* *Font Style Classes (body text will be the default, and located in the body element) */
+
+.h1-header {
+  font-family: var(--Acme);
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.header-subtext {
+  font-family: var(--Athiti);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.card-title {
+  font-family: var(--Acme);
+  font-size: 32px;
+  font-weight: normal;
+}
+
+/* .body-text {
+  font-family: var(--Athiti);
+  font-size: 16px;
+  font-weight: bold;
+} */
+.subheading-text {
+  font-family: var(--Acme);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--vertical-blue-to-black);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-width: 100vw;
+
+  /* same as body text class that is commented out */
+  font-family: var(--Athiti);
+  font-size: 18px;
+  /* font-weight: bold; */
+  color: var(--white);
+}
+
+#root {
+  height: 100%;
+}
+
+main {
+  /* default style for main to match header text margins */
+  margin: 0% 6% 0% 6%;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  /* overflow-x: hidden; */
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 6%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.reset-margin {
+  margin: 0;
+}
+
+.light-blue-text {
+  color: var(--light-blue);
+}
+
+.light-green-text {
+  color: var(--light-green);
+}
+
+.orange-text {
+  color: var(--orange);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 540px) {
+  main {
+    margin: 0% 1% 0% 1%;
+  }
+
+  .row{
+    margin-top: 1%;
+  }
+
+  .h1-header {
+    margin: 0;
+  }
+}

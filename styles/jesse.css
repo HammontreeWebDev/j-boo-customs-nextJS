@@ -1,0 +1,66 @@
+.jesse-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.title-container{
+    width: 100%;
+    text-align: center;
+    border: 3px solid var(--white);
+    padding: 5% 0% 5% 0%;
+    background-image: linear-gradient(to top,
+    var(--black) 29%, var(--light-blue));
+    position: relative;
+}
+.jesse-img{
+    width: 20vw;
+    position: absolute;
+    object-fit: contain;
+    top: 2.5%;
+    left: 6%;
+
+}
+.text-container{
+    width: 100%;
+    border: 3px solid var(--white);
+    margin-top: 1%;
+}
+
+.jesse-text{
+padding: 10% 5% 5% 5%;
+}
+
+/* media queries to resize card content */
+@media screen and (max-width: 730px) {
+    .jesse-title{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 597px) {
+    .title-container{
+        width: fit-content;
+        display: flex;
+        flex-flow: column-reverse wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .text-container{
+        width: fit-content;
+    }
+   .jesse-img{
+    /* reset position */
+    position: unset;
+    padding: 1%;
+    margin: 0;
+    width: 50%;
+   }
+   .jesse-title{
+    margin: 0;
+   }
+   .jesse-text{
+    padding: 5%;
+    }
+}
