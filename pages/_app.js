@@ -2,22 +2,22 @@ import React from 'react';
 import Head from 'next/head';
 
 // css files
-import "../ styles/index.css";
+import "../styles/index.css";
 import "../styles/contact-info.css";
 import "../styles/contactus.css";
 import "../styles/content-card.css";
 import "../styles/custom-video.css";
-import "../ styles/donations.css";
-import "../ styles/fancy-card.css";
-import "../ styles/footer.css";
-import "../ styles/formcontainer.css";
-import "../ styles/gallery.css";
-import "../ styles/header.css";
-import "../ styles/jesse.css";
-import "../ styles/load-spinner.css";
-import "../ styles/loading-div.css";
-import "../ styles/page-title.css";
-import "../ styles/standard-card.css";
+import "../styles/donations.css";
+import "../styles/fancy-card.css";
+import "../styles/footer.css";
+import "../styles/formcontainer.css";
+import "../styles/gallery.css";
+import "../styles/header.css";
+import "../styles/jesse.css";
+import "../styles/load-spinner.css";
+import "../styles/loading-div.css";
+import "../styles/page-title.css";
+import "../styles/standard-card.css";
 
 // components
 import Layout from '@/components/Layout';
