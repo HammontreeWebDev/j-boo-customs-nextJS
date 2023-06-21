@@ -20,7 +20,7 @@ import "../ styles/page-title.css";
 import "../ styles/standard-card.css";
 
 // components
-// Import layout here
+import Layout from '@/components/Layout';
 
 const App = ({ Component, pageProps }) => {
     return (
@@ -34,8 +34,9 @@ const App = ({ Component, pageProps }) => {
                 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Athiti:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
 
-        // TODO: wrap the below content in the Layout Component
-            <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
         </>
     )
 };
