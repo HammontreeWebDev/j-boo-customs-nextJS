@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import useImageLoading from '../utils/imageLoadingUtils';
 import useNavigation from "@/utils/navigationUtils";
 
@@ -8,6 +8,9 @@ import LoadingDiv from "./LoadingDiv";
 // images/icons
 import { Icon, enableCache } from '@iconify/react';
 enableCache('local');
+
+// create a new context
+export const HeaderContext = createContext();
 
 const Header = (props) => {
 
@@ -37,7 +40,7 @@ const Header = (props) => {
     const { handleNavigate } = useNavigation();
 
     return (
-        <header className="header-component">
+        <HeaderContext.Provider value={props} className="header-component">
             <img className="header-shape" src={"/img/header-shape.svg"} alt="Red Arch to enhance design" />
 
             {isImageLoaded ? null : <LoadingDiv />}
@@ -82,7 +85,7 @@ const Header = (props) => {
                     </p>
                 </div>
             </div>
-        </header>
+        </HeaderContext.Provider>
     )
 }
 

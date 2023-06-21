@@ -24,8 +24,20 @@ import "../styles/standard-card.css";
 
 // components
 import Layout from '@/components/Layout';
+import Landing from './index';
 
 const App = ({ Component, pageProps }) => {
+    let headerProps ={};
+
+    if (Component === Landing){
+        headerProps = {
+            backgroundImage: "/img/landing_header.png",
+            alt: "placeholder"
+        }
+    }
+    else {
+        null
+    }
     return (
         // ! may need to find an SSR provider
         <>
@@ -37,7 +49,7 @@ const App = ({ Component, pageProps }) => {
                 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Athiti:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
 
-            <Layout>
+            <Layout headerProps={headerProps}>
                 <Component {...pageProps} />
             </Layout>
         </>
