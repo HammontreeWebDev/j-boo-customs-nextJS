@@ -73,7 +73,7 @@ const Header = (props) => {
 
                     <button onClick={() => props.handleNavigate("/about_us")} className="subheading-text nav-btn">About Us</button>
 
-                    <button onClick={() => props.handleNavigate("/jesses_story")} className="subheading-text nav-btn">Jesse"s Story</button>
+                    <button onClick={() => props.handleNavigate("/jesses_story")} className="subheading-text nav-btn">Jesse&apos;s Story</button>
 
                     <button onClick={() => props.handleNavigate("/strep_a_awareness")} className="subheading-text nav-btn">Strep A Awareness</button>
 
