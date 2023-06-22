@@ -22,7 +22,7 @@ const CustomVideo = (props) => {
     return (
         <>
         {isImageLoaded ? null : <LoadSpinner />}
-        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} controls={true} autoPlay={false} playsInline={true} onLoad={handleImageLoad} onLoadedData={handleImageLoad}/>
+        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} controls={true} autoPlay={false} playsInline={true} onLoad={handleImageLoad} onLoadedData={handleImageLoad} onLoadedMetadata={handleImageLoad} preload="auto"/>
         </>
     )
 }
