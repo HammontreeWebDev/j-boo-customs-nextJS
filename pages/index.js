@@ -1,7 +1,6 @@
 import { React } from "react";
 import useNavigation from "../utils/navigationUtils";
 
-
 // import components
 import GalleryPhoto from "@/components/GalleryPhoto";
 import CustomVideo from "@/components/CustomVideo";
@@ -28,7 +27,7 @@ const Landing = () => {
             </section>
 
             <section className="row">
-                <CustomVideo isPageChanging={isPageChanging} src="../public/vid/ph-vid.mp4"/>
+                <CustomVideo isPageChanging={isPageChanging} src={"../public/vid/ph-vid.mp4"}/>
             </section>
         </main>
         </>

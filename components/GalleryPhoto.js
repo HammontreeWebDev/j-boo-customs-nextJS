@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useImageLoading from '../utils/imageLoadingUtils';
+import dynamic from "next/dynamic";
 
-// components
-import LoadSpinner from "./LoadSpinner";
+// components 
+// ! We are HERE
+const LoadSpinner = dynamic(() => import("./LoadSpinner"));
 
 const GalleryPhoto = (props) => {
     // keep track of state of image load using helper function
     const { isImageLoaded, handleImageLoad } = useImageLoading();
-    const initialClass = isImageLoaded ? "gallery-photo animate__animated animate__fadeIn" : "hidden";
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    const initialClass = isImageLoaded 
+    ? "gallery-photo animate__animated animate__fadeIn"
+    : "hidden";
     const exitClass = "gallery-photo animate__animated animate__fadeOut";
+
+    if (!isMounted){
+        return null
+    }
 
     return(
         <>
