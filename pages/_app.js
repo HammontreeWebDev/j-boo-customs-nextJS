@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 // css libraries
-import 'animate.css';
+import "animate.css";
 
 // css files
 import "../styles/index.css";
@@ -23,8 +23,8 @@ import "../styles/page-title.css";
 import "../styles/standard-card.css";
 
 // components
-import Layout from '@/components/Layout';
-import Landing from './index';
+import Layout from "@/components/Layout";
+import Landing from "./index";
 
 const App = ({ Component, pageProps }) => {
     return (

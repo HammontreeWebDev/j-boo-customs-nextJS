@@ -12,7 +12,7 @@ const Donations = () => {
     const { isPageChanging, handleNavigate } = useNavigation();
 
     const donationPortal = () => {
-        window.open(`https://donate.stripe.com/test_00g8xxgRb20rgyAaEE`);
+        window.open("https://donate.stripe.com/test_00g8xxgRb20rgyAaEE");
     };
 
     return (

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import useImageLoading from '../utils/imageLoadingUtils';
+import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
 
 // components
 const LoadingDiv = dynamic(() => import("./LoadingDiv"));
 
 // images/icons
-import { Icon, enableCache } from '@iconify/react';
-enableCache('local');
+import { Icon, enableCache } from "@iconify/react";
+enableCache("local");
 
 const Header = (props) => {
 
@@ -26,11 +26,11 @@ const Header = (props) => {
             setIsNavCollapsed(window.innerWidth <= 1330);
         };
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         handleResize();
 
-        return () => window.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     // if image is loaded then fade in, otherwise hide the image completely -- loading div will conditionally render based on state in return statement
@@ -54,7 +54,7 @@ const Header = (props) => {
             <div className="header-content">
 
 
-                <button onClick={() => props.handleNavigate('/')}
+                <button onClick={() => props.handleNavigate("/")}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 className={`h1-header jrb-button ${isHovered ? hoverClass : ""}`}>
@@ -68,18 +68,18 @@ const Header = (props) => {
                 </button>
 
                 <nav
-                    id='dropdown-nav'
-                    className={`nav-bar ${isNavCollapsed ? 'collapsed dropdown-nav-hidden' : 'dropdown-nav-visible'}`}>
+                    id="dropdown-nav"
+                    className={`nav-bar ${isNavCollapsed ? "collapsed dropdown-nav-hidden" : "dropdown-nav-visible"}`}>
 
-                    <button onClick={() => props.handleNavigate('/about_us')} className="subheading-text nav-btn">About Us</button>
+                    <button onClick={() => props.handleNavigate("/about_us")} className="subheading-text nav-btn">About Us</button>
 
-                    <button onClick={() => props.handleNavigate('/jesses_story')} className="subheading-text nav-btn">Jesse's Story</button>
+                    <button onClick={() => props.handleNavigate("/jesses_story")} className="subheading-text nav-btn">Jesse"s Story</button>
 
-                    <button onClick={() => props.handleNavigate('/strep_a_awareness')} className="subheading-text nav-btn">Strep A Awareness</button>
+                    <button onClick={() => props.handleNavigate("/strep_a_awareness")} className="subheading-text nav-btn">Strep A Awareness</button>
 
-                    <button onClick={() => props.handleNavigate('/contact_us')} className="subheading-text nav-btn">Contact Us</button>
+                    <button onClick={() => props.handleNavigate("/contact_us")} className="subheading-text nav-btn">Contact Us</button>
 
-                    <button onClick={() => props.handleNavigate('/donations')} className="subheading-text nav-btn">Donations</button>
+                    <button onClick={() => props.handleNavigate("/donations")} className="subheading-text nav-btn">Donations</button>
                 </nav>
                 <div className="header-subtext tagline-container">
                     <p className="header-tagline">

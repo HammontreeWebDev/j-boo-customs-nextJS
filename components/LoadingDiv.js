@@ -1,8 +1,8 @@
 import React from "react";
 
 // icons
-import { Icon, enableCache } from '@iconify/react';
-enableCache('local');
+import { Icon, enableCache } from "@iconify/react";
+enableCache("local");
 
 const LoadingDiv = () => {
 

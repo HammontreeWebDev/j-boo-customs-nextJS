@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import useImageLoading from '../utils/imageLoadingUtils';
+import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
 
 // components

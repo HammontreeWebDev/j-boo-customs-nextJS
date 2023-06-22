@@ -1,7 +1,7 @@
 import React from "react";
 import useNavigation from "../utils/navigationUtils";
 // import Iconify Icons
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
 // import components
 import Header from "@/components/Header";
