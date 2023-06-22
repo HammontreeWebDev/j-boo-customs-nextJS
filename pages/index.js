@@ -27,7 +27,7 @@ const Landing = () => {
             </section>
 
             <section className="row">
-                <CustomVideo isPageChanging={isPageChanging} src={"../public/vid/ph-vid.mp4"}/>
+                <CustomVideo isPageChanging={isPageChanging} src={"/vid/ph-vid.mp4"}/>
             </section>
         </main>
         </>
