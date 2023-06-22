@@ -15,7 +15,7 @@ const Landing = () => {
     return(
         <>
         <Header backgroundImage="/img/landing_header.png" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Dirt Bike"/>
-        <PageTitle isPageChanging={isPageChanging} whiteText="&#8220;Remembering, Preventing, and Healing:" greenText= "Together Against Strep A&#8221;"  />
+        <PageTitle isPageChanging={isPageChanging} whiteText="&quot;Remembering, Preventing, and Healing:" greenText= "Together Against Strep A&quot;"  />
         <main>
             <section className="row">
                 <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-1.png" alt="placeholder image"/>
