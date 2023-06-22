@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import useImageLoading from '../utils/imageLoadingUtils';
+import dynamic from "next/dynamic";
 
 // components
-import LoadingDiv from "./LoadingDiv";
+const LoadingDiv = dynamic(() => import("./LoadingDiv"));
 
 // images/icons
 import { Icon, enableCache } from '@iconify/react';
@@ -14,6 +15,11 @@ const Header = (props) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const { isImageLoaded, handleImageLoad } = useImageLoading();
     const [isHovered, setIsHovered] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,6 +38,10 @@ const Header = (props) => {
     // if page is changing set the fadeout animation
     const exitClass = "background-img animate__animated animate__fadeOut";
     const hoverClass = "animate__animated animate__pulse animate__infinite";
+
+    if (!isMounted){
+        return null
+    }
 
     return (
         <header className="header-component">

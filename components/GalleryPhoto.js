@@ -3,7 +3,6 @@ import useImageLoading from '../utils/imageLoadingUtils';
 import dynamic from "next/dynamic";
 
 // components 
-// ! We are HERE
 const LoadSpinner = dynamic(() => import("./LoadSpinner"));
 
 const GalleryPhoto = (props) => {
