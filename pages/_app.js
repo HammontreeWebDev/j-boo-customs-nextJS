@@ -24,7 +24,6 @@ import "../styles/standard-card.css";
 
 // components
 import Layout from "@/components/Layout";
-import Landing from "./index";
 
 const App = ({ Component, pageProps }) => {
     return (
