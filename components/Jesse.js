@@ -29,7 +29,7 @@ const Jesse = (props) => {
         <div className={props.isPageChanging ? exitClass : initialClass}>
             <div className="title-container">
                 <div className="h1-header jesse-title">
-                    {props.whiteTitle} <span className="light-blue-text">{props.blueTitle}</span>
+                    {props.whiteTitle} <span className="light-blue-text">{props.blueTitle}&rdquo;</span>
                 </div>
                 <img className={imgClass} src={props.src} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} />
                 {isImageLoaded ? null : <LoadSpinner />}
