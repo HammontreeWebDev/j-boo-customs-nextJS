@@ -14,8 +14,7 @@ const CustomVideo = (props) => {
         setIsMounted(true);
     }, []);
 
-    // const initialClass = isImageLoaded ? "custom-video animate__animated animate__fadeIn" : "hidden";
-    const initialClass = "custom-video animate__animated animate__fadeIn";
+    const initialClass = isImageLoaded ? "custom-video animate__animated animate__fadeIn" : "hidden";
     const exitClass = "custom-video animate__animated animate__fadeOut";
 
     
@@ -28,8 +27,8 @@ const CustomVideo = (props) => {
 
     return (
         <>
-        {/* {!isImageLoaded && <LoadSpinner />} */}
-        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} />
+        {!isImageLoaded && <LoadSpinner />}
+        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} onCanPlay={handleImageLoad} onLoadedData={handleImageLoad} />
         </>
     )
 }
