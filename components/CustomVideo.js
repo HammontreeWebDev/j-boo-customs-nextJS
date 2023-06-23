@@ -19,14 +19,10 @@ const CustomVideo = (props) => {
         return null
     }
 
-    const removeLoadingSpinner = () => {
-        handleImageLoad();
-    }
-
     return (
         <>
-        {isImageLoaded ? null : <LoadSpinner />}
-        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} onCanPlayThrough={removeLoadingSpinner}/>
+        {!isImageLoaded && <LoadSpinner />}
+        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} onCanPlayThrough={handleImageLoad}/>
         </>
     )
 }
