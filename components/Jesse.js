@@ -3,7 +3,7 @@ import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
 
 // components
-const LoadSpinner = dynamic(() => import("./LoadSpinner"));
+const LoadSpinner = dynamic(() => import("./LoadSpinner"), {ssr: false});
 
 const Jesse = (props) => {
     // keep track of state of image load using helper function

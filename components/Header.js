@@ -3,7 +3,7 @@ import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
 
 // components
-const LoadingDiv = dynamic(() => import("./LoadingDiv"));
+const LoadingDiv = dynamic(() => import("./LoadingDiv"), {ssr: false});
 
 // images/icons
 import { Icon, enableCache } from "@iconify/react";

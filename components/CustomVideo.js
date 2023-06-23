@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import useImageLoading from "../utils/imageLoadingUtils";
 
 // components
-const LoadSpinner = dynamic(() => import("./LoadSpinner"));
+const LoadSpinner = dynamic(() => import("./LoadSpinner"), {ssr: false});
 
 const CustomVideo = (props) => {
     const [isMounted, setIsMounted] = useState(false);
