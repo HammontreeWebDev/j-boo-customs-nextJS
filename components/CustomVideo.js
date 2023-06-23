@@ -1,22 +1,26 @@
 import React, { useState, useEffect }from "react";
 import dynamic from "next/dynamic";
+import useImageLoading from "../utils/imageLoadingUtils";
+
 // components
 const LoadSpinner = dynamic(() => import("./LoadSpinner"));
 
 const CustomVideo = (props) => {
     const [isMounted, setIsMounted] = useState(false);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const { isImageLoaded, handleImageLoad } = useImageLoading();
 
-    const handleImageLoad = () =>{
-        setIsImageLoaded(true);
-    }
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
-    const initialClass = isImageLoaded ? "custom-video animate__animated animate__fadeIn" : "hidden";
+    // const initialClass = isImageLoaded ? "custom-video animate__animated animate__fadeIn" : "hidden";
+    const initialClass = "custom-video animate__animated animate__fadeIn";
     const exitClass = "custom-video animate__animated animate__fadeOut";
+
+    
+        const logThis = () => {console.log(isImageLoaded);}
+
 
     if (!isMounted){
         return null
@@ -24,8 +28,8 @@ const CustomVideo = (props) => {
 
     return (
         <>
-        {!isImageLoaded && <LoadSpinner />}
-        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} onLoadedData={handleImageLoad} onLoad={handleImageLoad}/>
+        {/* {!isImageLoaded && <LoadSpinner />} */}
+        <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} />
         </>
     )
 }
