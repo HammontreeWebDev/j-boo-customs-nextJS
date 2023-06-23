@@ -14,18 +14,8 @@ const CustomVideo = (props) => {
         setIsMounted(true);
     }, []);
 
-    useEffect(() => {
-        // Check if the video has already loaded (e.g., due to cache) when the component mounts
-        if (props.src) {
-            handleImageLoad();
-        }
-    }, [props.src, handleImageLoad]);
-
-    const initialClass = isImageLoaded ? "custom-video animate__animated animate__fadeIn" : "hidden";
+    const initialClass = "custom-video animate__animated animate__fadeIn";
     const exitClass = "custom-video animate__animated animate__fadeOut";
-
-
-    const logThis = () => { console.log(isImageLoaded); }
 
 
     if (!isMounted) {
@@ -35,7 +25,7 @@ const CustomVideo = (props) => {
     return (
         <>
             {isImageLoaded ? null : <LoadSpinner />}
-            <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} muted={true} onLoadedData={handleImageLoad} />
+            <video className={props.isPageChanging ? exitClass : initialClass} src={props.src} preload="auto" controls={true} playsInline={true} muted={true} onLoadedData={handleImageLoad} onLoad={handleImageLoad} style={isImageLoaded ? {visibility: "visible"} : {visibility: "hidden"}} />
         </>
     )
 }
