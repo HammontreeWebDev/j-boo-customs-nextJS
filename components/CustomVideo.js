@@ -17,7 +17,7 @@ const CustomVideo = (props) => {
     return (
         <>
         {isLoading && <LoadSpinner />}
-            <video className={props.isPageChanging ? exitClass : initialClass} preload="auto" controls={true} playsInline={true} muted={true} onCanPlayThrough={removeLoader} onLoad={removeLoader} onLoadedData={removeLoader} style={isLoading ? {visibility: "hidden"} : {visibility: "visible"}} src={props.src}/>
+            <video className={props.isPageChanging ? exitClass : initialClass} preload="auto" controls={true} playsInline={true} autoPlay={true} muted={true} onPlay={removeLoader} onLoadedData={removeLoader} style={isLoading ? {visibility: "hidden"} : {visibility: "visible"}} src={props.src}/>
         </>
     )
 }
