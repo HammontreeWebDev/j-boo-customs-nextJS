@@ -1,11 +1,12 @@
 import { React } from "react";
 import useNavigation from "../utils/navigationUtils";
+import dynamic from "next/dynamic";
 
 // import components
 import GalleryPhoto from "@/components/GalleryPhoto";
-import CustomVideo from "@/components/CustomVideo";
 import PageTitle from "@/components/PageTitle";
 import Header from "@/components/Header";
+const CustomVideo = dynamic(() => import("@/components/CustomVideo"), { ssr: false });
 
 // Landing Page | route = /landing
 const Landing = () => {
