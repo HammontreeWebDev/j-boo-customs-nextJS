@@ -31,7 +31,7 @@ const CustomVideo = (props) => {
             {isImageLoaded ? null : <LoadSpinner />}
 
             <video className={props.isPageChanging ? exitClass : initialClass} preload="auto" controls={true} playsInline={true} muted={true} onCanPlayThrough={handleImageLoad} onLoad={handleImageLoad} onLoadedData={handleImageLoad}>
-                <source src={props.src} />
+                <source src={props.src} type="video/mp4"/>
             </video>
         </>
     )
