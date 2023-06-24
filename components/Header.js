@@ -53,7 +53,7 @@ const Header = (props) => {
 
 
                 <h2 className="h1-header jrb-header">
-                    Jesse Ryder Brown Foundation
+                    Jesse Ryder Brown Foundation, Inc
                 </h2>
 
 
