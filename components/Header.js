@@ -3,7 +3,7 @@ import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
 
 // components
-const LoadingDiv = dynamic(() => import("./LoadingDiv"), {ssr: false});
+const LoadingDiv = dynamic(() => import("./LoadingDiv"), { ssr: false });
 
 // images/icons
 import { Icon, enableCache } from "@iconify/react";
@@ -14,7 +14,6 @@ const Header = (props) => {
     // keep track of state
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const { isImageLoaded, handleImageLoad } = useImageLoading();
-    const [isHovered, setIsHovered] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -37,9 +36,8 @@ const Header = (props) => {
     const headerImageClass = isImageLoaded ? "background-img animate__animated animate__fadeIn" : "hidden";
     // if page is changing set the fadeout animation
     const exitClass = "background-img animate__animated animate__fadeOut";
-    const hoverClass = "animate__animated animate__pulse animate__infinite";
 
-    if (!isMounted){
+    if (!isMounted) {
         return null
     }
 
@@ -54,12 +52,9 @@ const Header = (props) => {
             <div className="header-content">
 
 
-                <button onClick={() => props.handleNavigate("/")}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                className={`h1-header jrb-button ${isHovered ? hoverClass : ""}`}>
-                    Jesse Ryder Brown Foundation, INC
-                </button>
+                <h2 className="h1-header jrb-header">
+                    Jesse Ryder Brown Foundation
+                </h2>
 
 
 
@@ -70,6 +65,8 @@ const Header = (props) => {
                 <nav
                     id="dropdown-nav"
                     className={`nav-bar ${isNavCollapsed ? "collapsed dropdown-nav-hidden" : "dropdown-nav-visible"}`}>
+
+                    <button onClick={() => props.handleNavigate("/")} className="subheading-text nav-btn">Home</button>
 
                     <button onClick={() => props.handleNavigate("/about_us")} className="subheading-text nav-btn">About Us</button>
 

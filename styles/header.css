@@ -59,14 +59,12 @@
     padding-top: 1%;
 }
 
-.jrb-button {
-    background-color: transparent;
-    border: none;
-    color: white;
+.jrb-header {
     text-shadow:
         2px 2px 2px black,
         1.5px 3px 2px black;
-
+    margin: 0;
+    user-select: none;
 }
 
 .jrb-button:hover {
