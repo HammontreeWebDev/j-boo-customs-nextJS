@@ -6,7 +6,10 @@ import dynamic from "next/dynamic";
 import GalleryPhoto from "@/components/GalleryPhoto";
 import PageTitle from "@/components/PageTitle";
 import Header from "@/components/Header";
-const CustomVideo = dynamic(() => import("@/components/CustomVideo"), { ssr: false });
+import LoadSpinner from "@/components/LoadSpinner";
+
+// Dynamic Imports
+const CustomVideo = dynamic(() => import("@/components/CustomVideo"), {loading: () => <LoadSpinner />});
 
 // Landing Page | route = /landing
 const Landing = () => {
