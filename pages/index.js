@@ -9,7 +9,10 @@ import Header from "@/components/Header";
 import LoadSpinner from "@/components/LoadSpinner";
 
 // Dynamic Imports
-const CustomVideo = dynamic(() => import("@/components/CustomVideo"), {loading: () => <LoadSpinner />});
+const CustomVideo = dynamic(() => import("../components/CustomVideo"), {
+    loading: () => <LoadSpinner />,
+    ssr: false,
+});
 
 // Landing Page | route = /landing
 const Landing = () => {
