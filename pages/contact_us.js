@@ -40,8 +40,6 @@ const ContactUs = () => {
 
                                 <ContactInfo title="Betsy Brown | Vice President" emailIcon={<IconifyEmail />} email="betsy@j-boocustoms.org" phoneIcon={<IconifyPhone />} phone="xxx-xxx-xxxx" />
 
-                                <ContactInfo title="Brian Hammontree | Treasurer" emailIcon={<IconifyEmail />} email="treasurer@j-boocustoms.org" />
-
                                 <ContactInfo title="General Inquiry" emailIcon={<IconifyEmail />} email="information@j-boocustoms.org" />
                             </div>
                         }
