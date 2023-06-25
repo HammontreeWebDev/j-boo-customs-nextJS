@@ -67,10 +67,6 @@
     user-select: none;
 }
 
-.jrb-button:hover {
-    cursor: pointer;
-}
-
 .nav-bar {
     display: flex;
     flex: 0.9;
@@ -98,6 +94,10 @@
 }
 
 .toggle-nav-button {
+    display: none;
+}
+
+.close-nav-button {
     display: none;
 }
 
@@ -170,6 +170,19 @@
         color: var(--white);
     }
 
+    .close-nav-button {
+        display: inline-flex;
+        background-color: transparent;
+        border: none;
+        padding: none;
+        font-size: 40px;
+        color: var(--white);
+        position: fixed;
+        top: 0.65%;
+        right: 5.95%;
+        z-index: 4;
+    }
+
     #dropdown-nav {
         display: flex;
         flex-direction: column;
@@ -207,7 +220,8 @@
 @media screen and (max-width: 1050px) {
 
     .h1-header,
-    .toggle-nav-button {
+    .toggle-nav-button,
+    .close-nav-button {
         /* down from 40px */
         font-size: 32px;
     }
@@ -231,7 +245,8 @@
 @media screen and (max-width: 575px) {
 
     .h1-header,
-    .toggle-nav-button {
+    .toggle-nav-button,
+    .close-nav-button {
         /* down from 40px */
         font-size: 28px;
     }
@@ -244,7 +259,8 @@
 @media screen and (max-width: 503px) {
 
     .h1-header,
-    .toggle-nav-button {
+    .toggle-nav-button,
+    .close-nav-button {
         /* down from 40px */
         font-size: 25px;
     }
@@ -284,7 +300,8 @@
 @media screen and (max-width: 452px) {
 
     .h1-header,
-    .toggle-nav-button {
+    .toggle-nav-button,
+    .close-nav-button {
         /* down from 40px */
         font-size: 20px;
     }
@@ -302,6 +319,7 @@
 
     .h1-header,
     .toggle-nav-button,
+    .close-nav-button,
     .card-title,
     .subheading-text {
         /* down from 40px */

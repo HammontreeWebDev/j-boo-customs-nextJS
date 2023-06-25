@@ -58,8 +58,12 @@ const Header = (props) => {
 
 
 
-                <button className="toggle-nav-button" onClick={() => setIsNavCollapsed(!isNavCollapsed)}>
-                    <Icon icon="line-md:close-to-menu-alt-transition" />
+                <button className={isNavCollapsed ? "toggle-nav-button" : "close-nav-button"} onClick={() => setIsNavCollapsed(!isNavCollapsed)}>
+                    {isNavCollapsed ? (
+                        <Icon icon="line-md:close-to-menu-alt-transition" />
+                    ) : (
+                        <Icon icon="line-md:menu-to-close-alt-transition" />
+                    )}
                 </button>
 
                 <nav
