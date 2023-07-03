@@ -13,7 +13,7 @@ const JessesStory = () => {
 
     return (
         <>
-            <Header backgroundImage={"/img/jesses_story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header headerImgId="story-header" backgroundImage={"/img/story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />
             <main>
                 <section className="row">

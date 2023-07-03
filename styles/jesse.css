@@ -20,6 +20,10 @@
     left: 6%;
 
 }
+#story-header{
+    object-fit: cover;
+    object-position: 50% 12%;
+}
 .text-container{
     width: 100%;
     border: 3px solid var(--white);
