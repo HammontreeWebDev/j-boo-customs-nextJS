@@ -121,6 +121,11 @@ main {
   text-decoration: underline;
 }
 
+#landing-header {
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
 @media screen and (max-width: 540px) {
   main {
     margin: 0% 1% 0% 1%;
