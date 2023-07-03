@@ -15,7 +15,7 @@ const AboutUs = () => {
 
     return (
         <>
-            <Header backgroundImage={"/img/about-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate}/>
+            <Header backgroundImage={"/img/about_us_header.svg"} isPageChanging={isPageChanging} handleNavigate={handleNavigate}/>
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />
             <main>
                 {/* Who we Are */}

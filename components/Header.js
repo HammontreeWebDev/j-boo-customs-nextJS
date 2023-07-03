@@ -47,7 +47,7 @@ const Header = (props) => {
 
             {isImageLoaded ? null : <LoadingDiv />}
 
-            <img className={props.isPageChanging ? exitClass : headerImageClass} src={props.backgroundImage} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} />
+            <img id={props.headerImgId} className={props.isPageChanging ? exitClass : headerImageClass} src={props.backgroundImage} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} />
 
             <div className="header-content">
 

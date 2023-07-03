@@ -13,7 +13,7 @@ const nextConfig = {
                 const extension = resourcePath.split(".").pop();
                 // Determine the appropriate folder based on the file extension
                 let folder;
-                if (extension === "webp" || extension === "ico" || extension === "png") {
+                if (extension === "webp" || extension === "ico" || extension === "png" || extension === "svg") {
                   folder = "static/images";
                 } else {
                   folder = "static/videos";

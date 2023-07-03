@@ -21,7 +21,7 @@ const Landing = () => {
 
     return (
         <>
-            <Header backgroundImage="/img/landing_header.png" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Dirt Bike" />
+            <Header backgroundImage="/img/landing_header.svg" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Dirt Bike" />
             <PageTitle isPageChanging={isPageChanging} whiteText="&quot;Remembering, Preventing, and Healing:" greenText="Together Against Strep A&quot;" />
             <main>
                 <section className="row">
