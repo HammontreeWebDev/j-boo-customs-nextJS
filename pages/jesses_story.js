@@ -17,7 +17,7 @@ const JessesStory = () => {
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />
             <main>
                 <section className="row">
-                    <Jesse isPageChanging={isPageChanging} whiteTitle="Jesse Brown -" blueTitle="&quot;J-Boo&quot;" src={"/img/jesse-placeholder.png"} alt="placeholder image for jesse"
+                    <Jesse isPageChanging={isPageChanging} whiteTitle="Jesse Brown -" blueTitle="&quot;J-Boo&quot;" src={"/img/Jesse-Avatar.webp"} alt="placeholder image for jesse"
                         text={
                             <>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
