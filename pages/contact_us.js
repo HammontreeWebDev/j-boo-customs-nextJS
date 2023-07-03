@@ -33,7 +33,7 @@ const ContactUs = () => {
             <main>
                 {/* id props to override css for about me classes */}
                 <section className="row">
-                    <FancyCard isPageChanging={isPageChanging} fancyContainerId="fancy-override" titleColId="title-override" classSelector="contact-container" memberName="Contact Information" memberPhoto={"/img/contact-ph.png"} photoId="contact-photo" alt="white envelope with a red pencil"
+                    <FancyCard isPageChanging={isPageChanging} fancyContainerId="fancy-override" titleColId="title-override" classSelector="contact-container" memberName="Contact Information" memberPhoto={"/img/contact-us-avatar.webp"} photoId="contact-photo" alt="white envelope with a red pencil"
                         contactInfo={
                             <div id="contact-section">
                                 <ContactInfo title="Brad Brown | President" emailIcon={<IconifyEmail />} email="brad@j-boocustoms.org" phoneIcon={<IconifyPhone />} phone="xxx-xxx-xxxx" />
