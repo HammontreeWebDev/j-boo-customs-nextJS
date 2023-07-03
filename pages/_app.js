@@ -21,6 +21,7 @@ import "../styles/load-spinner.css";
 import "../styles/loading-div.css";
 import "../styles/page-title.css";
 import "../styles/standard-card.css";
+import "../styles/about-us.css";
 
 // components
 import Layout from "@/components/Layout";
