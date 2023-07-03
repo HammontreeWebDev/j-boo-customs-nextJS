@@ -25,17 +25,14 @@ const Landing = () => {
             <PageTitle isPageChanging={isPageChanging} whiteText="&quot;Remembering, Preventing, and Healing:" greenText="Together Against Strep A&quot;" />
             <main>
                 <section className="row">
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-1.png" alt="placeholder image" />
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-2.png" alt="placeholder image" />
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-3.png" alt="placeholder image" />
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-4.png" alt="placeholder image" />
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-5.png" alt="placeholder image" />
-                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/ph-6.png" alt="placeholder image" />
-                </section>
-
-                <section className="row">
-                    {isLoading && <LoadSpinner />}
-                    <video className={isPageChanging ? exitClass : initialClass} preload="auto" controls={true} playsInline={true} autoPlay={true} muted={true} onPlay={removeLoader} onLoadedData={removeLoader} style={isLoading ? { visibility: "hidden" } : { visibility: "visible" }} src="/vid/ph-vid.mp4" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo1.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo2.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo3.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo4.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo5.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo6.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo7.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo8.webp" alt="placeholder image" />
                 </section>
             </main>
         </>
