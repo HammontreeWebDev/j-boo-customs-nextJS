@@ -1,4 +1,5 @@
 #about-us-header {
     object-fit: cover;
-    object-position: center;
+    object-position: 50% 45%;
+    max-width: 50%;
 }

@@ -124,6 +124,7 @@ main {
 #landing-header {
   object-fit: cover;
   object-position: 50% 20%;
+  max-width: 50%;
 }
 
 @media screen and (max-width: 540px) {
