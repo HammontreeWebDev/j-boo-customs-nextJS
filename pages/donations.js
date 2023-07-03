@@ -17,7 +17,7 @@ const Donations = () => {
 
     return (
         <>
-            <Header backgroundImage={"/img/donations-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header backgroundImage={"/img/donations_header.svg"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Donate" greenText="Now" />
             <main>
                 <section className="row">
