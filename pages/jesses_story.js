@@ -13,7 +13,7 @@ const JessesStory = () => {
 
     return (
         <>
-            <Header backgroundImage={"/img/story-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header backgroundImage={"/img/jesses_story_header.svg"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />
             <main>
                 <section className="row">
