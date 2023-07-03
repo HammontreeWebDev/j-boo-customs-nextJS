@@ -33,6 +33,7 @@ const Landing = () => {
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo6.webp" alt="placeholder image" />
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo7.webp" alt="placeholder image" />
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo8.webp" alt="placeholder image" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo9.webp" alt="placeholder image" />
                 </section>
             </main>
         </>
