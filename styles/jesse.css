@@ -21,8 +21,7 @@
 
 }
 #story-header{
-    object-fit: cover;
-    object-position: 50% 12%;
+    object-position: 50% 20%;
 }
 .text-container{
     width: 100%;
