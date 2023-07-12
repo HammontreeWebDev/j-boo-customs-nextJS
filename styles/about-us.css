@@ -1,4 +1,10 @@
 #about-us-header {
-    object-fit: cover;
-    object-position: 50% 50%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 420px) {
+    #about-us-header {
+        object-position: 50% 45%;
+        object-fit: cover;
+    }
 }
