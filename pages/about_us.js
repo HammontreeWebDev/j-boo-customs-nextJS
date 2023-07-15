@@ -22,7 +22,7 @@ const AboutUs = () => {
                 <section className="row">
                     <ContentCard isPageChanging={isPageChanging} greenText="Who" whiteText="We Are" bodyText={
                         <>
-                            Our goal as a non-profit is to raise awareness about the terrible illness that took our Jesse. We still don't know the root of the cause, or how he got it. Doctors didn't have the necessary research and information to be able to figure out what was wrong with him fast enough, and even when they did figure out it was Group A Strep, they did not know how to fight it. This strain is so aggressive and attacked the weakest parts of his body before we even knew he was sick. We don't wish what we went through on any other family and we hope that by spreading awareness about the signs and symptoms, and raising money to fund research into finding the most effective treatment and diagnostics, then hopefully no other family will have to go through this. Multiple other children in our area have also gotten sick from Group A Strep, and by the grace of God a few of them survived without major deficits. Because we put Jesse's story out there, the parents were more aware that this is a possibility, and the doctors were ready in the same hospital Jesse was in. That is what we aim to keep doing.
+                            Our goal as a non-profit is to raise awareness about the terrible illness that took our Jesse. We still don&apos;t know the root of the cause, or how he got it. Doctors didn&apos;t have the necessary research and information to be able to figure out what was wrong with him fast enough, and even when they did figure out it was Group A Strep, they did not know how to fight it. This strain is so aggressive and attacked the weakest parts of his body before we even knew he was sick. We don&apos;t wish what we went through on any other family and we hope that by spreading awareness about the signs and symptoms, and raising money to fund research into finding the most effective treatment and diagnostics, then hopefully no other family will have to go through this. Multiple other children in our area have also gotten sick from Group A Strep, and by the grace of God a few of them survived without major deficits. Because we put Jesse&apos;s story out there, the parents were more aware that this is a possibility, and the doctors were ready in the same hospital Jesse was in. That is what we aim to keep doing.
                         </>
                     } />
                 </section>
@@ -40,7 +40,7 @@ const AboutUs = () => {
                     <FancyCard classSelector="text-col fancy-text" memberName="Betsy Brown | Vice President"
                         memberPhoto={"/img/betsy-avatar4x.webp"} alt="Betsy Brown | Vice President"
                         aboutText={<>
-                            It is hard to put into words what an amazing person and mother Betsy is. Her son, like Brad, was her whole life. Betsy's dream was to be a mother and have a family. She wants nothing more than to keep Jesse's legacy alive and not to have any other family go through what they went through.
+                            It is hard to put into words what an amazing person and mother Betsy is. Her son, like Brad, was her whole life. Betsy&apos;s dream was to be a mother and have a family. She wants nothing more than to keep Jesse&apos;s legacy alive and not to have any other family go through what they went through.
                         </>} />
                 </section>
             </main>

@@ -1,5 +1,6 @@
 import React from "react";
 import useNavigation from "../utils/navigationUtils";
+import Link from "next/link";
 
 // import components
 import Header from "@/components/Header";
@@ -21,13 +22,13 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Help Us" whiteTitle=" Fight Back" bodyText={
                         <>
-                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <a className="light-green-text" href="#">sharing</a> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <a className="light-green-text" href="/donations">donate</a> directly to the foundation.
+                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <Link className="light-green-text" href="#">sharing</Link> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <Link className="light-green-text" href="/donations">donate</Link> directly to the foundation.
                             <br></br>
                             <br></br>
                             Your continued support goes a long way in helping the fight against Strep A.
                             <br></br>
                             <br></br>
-                            If you have any concerns or questions, please <a className="light-green-text" href="/contact_us">contact us</a>.
+                            If you have any concerns or questions, please <Link className="light-green-text" href="/contact_us">contact us</Link>.
                         </>
                     } />
                 </section>
