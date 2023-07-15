@@ -21,10 +21,13 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Help Us" whiteTitle=" Fight Back" bodyText={
                         <>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br />
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <a className="light-green-text" href="#">sharing</a> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <a className="light-green-text" href="/donations">donate</a> directly to the foundation.
+                            <br></br>
+                            <br></br>
+                            Your continued support goes a long way in helping the fight against Strep A.
+                            <br></br>
+                            <br></br>
+                            If you have any concerns or questions, please <a className="light-green-text" href="/contact_us">contact us</a>.
                         </>
                     } />
                 </section>
@@ -33,10 +36,18 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Signs &amp;" whiteTitle=" Symptoms" bodyText={
                         <>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br />
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Group A Strep is not your normal strep throat infection. Group A Strep lives on the skin and inside the throat. Once inside the bloodstream, Group A Strep can cause a huge amount of issues. 
+                            <br></br>
+                            <br></br>
+                            With Jesse, it presented as fever, general tiredness, and then progressed to a reddish-purple splotchy rash on his legs. The doctors believe since he sprained his ankle the week prior, the infection began to attack his injured ankle, the weakest part in his body. The rash spread up his legs and he was very cold. He was taken to the hospital the morning the rash was found. The strain of Group A Strep that attacked Jesse was so aggressive that by the time we realized the rash, it was already attacking his major organs, causing sepsis.
+                            <br></br>
+                            <br></br>
+                            Other symptoms include: 
+                            <ul>
+                                <li>Difficulty Breathing</li>
+                                <li>Pain When Swallowing</li>
+                                <li>Swollen Lymph Nodes</li>
+                                </ul>
                         </>
                     } />
                 </section>
