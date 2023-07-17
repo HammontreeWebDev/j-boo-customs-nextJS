@@ -55,6 +55,8 @@
 
 #submitBtn:hover{
     cursor: pointer;
+    background-color: var(--light-green);
+    color: var(--black);
 }
 
 

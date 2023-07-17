@@ -1,11 +1,11 @@
 #donateBtn{
     color: var(--white);
     background-color: var(--dark-green);
+    text-decoration: none;
     font-size: 20px;
     padding: 1% 5% 1% 5%;
     margin-bottom: 2%;
     margin-top: 2%;
-    border: 3px solid white;
     border-radius: 3rem;
     font-family: var(--Acme);
     top: 100%;
@@ -14,7 +14,8 @@
 
 #donateBtn:hover{
     cursor: pointer;
-    background-color: black;
+    background-color: var(--light-green);
+    color: var(--black);
 }
 
 #donations-card{
