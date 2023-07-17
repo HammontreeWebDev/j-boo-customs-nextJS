@@ -12,17 +12,13 @@ const Donations = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
 
-    const donationPortal = () => {
-        window.open("https://donate.stripe.com/test_00g8xxgRb20rgyAaEE");
-    };
-
     return (
         <>
             <Header backgroundImage={"/img/donations_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Donate" greenText="Now" />
             <main>
                 <section className="row">
-                    <ContentCard isPageChanging={isPageChanging} greenText="Why You Should" whiteText=" Donate" bodyText={
+                    <ContentCard isPageChanging={isPageChanging} contentID="donations-card" greenText="Why You Should" whiteText=" Donate" bodyText={
                         <>
                             Your donation is going straight towards furthering research and awareness about Group A Strep. 
                             <br></br>
@@ -31,10 +27,12 @@ const Donations = () => {
                             If you wish to donate to the Jesse Ryder Brown Foundation, simply click the Donate button below.
                             <br></br>
                             Additionally, if you have any questions or concerns, please do not hesitate to <Link className="green-text" href={"/contact_us"}>contact us</Link>.
+
                         </>
                     } customContent={
-                        <button onClick={donationPortal} id="donateBtn">Donate</button>
-                    } />
+                        <Link id="donateBtn" href="https://donate.stripe.com/test_00g8xxgRb20rgyAaEE">Donate</Link>
+                    }
+                    />
                 </section>
             </main>
         </>

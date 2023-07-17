@@ -1,17 +1,26 @@
 #donateBtn{
-    width: fit-content;
-    align-self: center;
     color: var(--white);
     background-color: var(--dark-green);
     font-size: 20px;
     padding: 1% 5% 1% 5%;
-    border: none;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border: 3px solid white;
     border-radius: 3rem;
     font-family: var(--Acme);
+    top: 100%;
+    z-index: 5;
 }
 
 #donateBtn:hover{
     cursor: pointer;
+    background-color: black;
+}
+
+#donations-card{
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
 }
 
 @media screen and (max-width: 540px) {
