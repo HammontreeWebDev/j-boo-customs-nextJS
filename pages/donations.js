@@ -5,6 +5,7 @@ import useNavigation from "../utils/navigationUtils";
 import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import ContentCard from "@/components/ContentCard";
+import Link from "next/link";
 
 // Donations Page | route = /donations
 const Donations = () => {
@@ -23,14 +24,16 @@ const Donations = () => {
                 <section className="row">
                     <ContentCard isPageChanging={isPageChanging} greenText="Why You Should" whiteText=" Donate" bodyText={
                         <>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br />
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br />
-                            <br />
-                            <button onClick={donationPortal} id="donateBtn">Click Here To Donate</button>
+                            Your donation is going straight towards furthering research and awareness about Group A Strep. 
+                            <br></br>
+                            The pain of losing our Jesse will never be gone, however, it lessens the pain to know his story is helping other families and ensuring no one else has to go through what he did.
+                            <br></br>
+                            If you wish to donate to the Jesse Ryder Brown Foundation, simply click the Donate button below.
+                            <br></br>
+                            Additionally, if you have any questions or concerns, please do not hesitate to <Link className="green-text" href={"/contact_us"}>contact us</Link>.
                         </>
+                    } customContent={
+                        <button onClick={donationPortal} id="donateBtn">Donate</button>
                     } />
                 </section>
             </main>
