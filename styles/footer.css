@@ -11,14 +11,14 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    z-index: -1;
+    z-index: 0;
 }
 
 .footer-shape {
     width: 100%;
     height: 100%;
-    z-index: -1;
     position: absolute;
+    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -28,16 +28,18 @@
 .copyright{
     text-align: center;
     position: relative;
-    z-index: 5;
+    z-index: 1;
     margin: 0;
     padding-bottom: 1%;
 }
-
-.small-text {
+.small-text{
     position: relative;
-    z-index: 5;
+    z-index: 1;
 }
-
+#portfolio-link {
+    position: relative;
+    z-index: 1;
+}
 .hyperlink{
     text-decoration: none;
     color: white;

@@ -9,7 +9,6 @@
     border-radius: 3rem;
     font-family: var(--Acme);
     top: 100%;
-    z-index: 5;
 }
 
 #donateBtn:hover{
@@ -20,8 +19,6 @@
 
 #donations-card{
     flex-direction: column;
-    position: relative;
-    z-index: 5;
 }
 
 @media screen and (max-width: 540px) {

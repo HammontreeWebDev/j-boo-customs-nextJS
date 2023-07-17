@@ -86,6 +86,9 @@ main {
   flex-flow: column wrap;
   flex: 1;
   /* overflow-x: hidden; */
+  /* ! z-index set to be above the footer so links work properly */
+  position: relative;
+  z-index: 5;
 }
 
 .row {
