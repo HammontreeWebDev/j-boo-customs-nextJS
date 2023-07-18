@@ -61,13 +61,15 @@ const StrepAAwareness = () => {
                             <br></br>
                             <br></br>
                             Other symptoms include:
-                            <ul>
+                        </>
+                    }
+                        UL={
+                            <>
                                 <li>Difficulty Breathing</li>
                                 <li>Pain When Swallowing</li>
                                 <li>Swollen Lymph Nodes</li>
-                            </ul>
-                        </>
-                    } />
+                            </>
+                        } />
                 </section>
 
                 {/* Medical Journals Section */}
