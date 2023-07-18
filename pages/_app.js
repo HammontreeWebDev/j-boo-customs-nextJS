@@ -32,12 +32,7 @@ const App = ({ Component, pageProps }) => {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                {/* TODO: import link tag for favicon */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link href="https://fonts.googleapis.com/css2?family=Acme&family=Athiti:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
-
             <Layout>
                 <Component {...pageProps} />
             </Layout>
