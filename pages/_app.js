@@ -22,6 +22,7 @@ import "../styles/loading-div.css";
 import "../styles/page-title.css";
 import "../styles/standard-card.css";
 import "../styles/about-us.css";
+import "../styles/strep_a_awareness.css";
 
 // components
 import Layout from "@/components/Layout";

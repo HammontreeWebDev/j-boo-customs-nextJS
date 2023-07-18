@@ -1,0 +1,23 @@
+#shareBtn{
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    font-size: inherit;
+}
+
+.hoverLink {
+    font-family: var(--Athiti);
+}
+
+.hoverLink:hover {
+cursor: pointer;
+color: var(--orange);
+}
+
+.medical-disclaimer {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1%;
+}

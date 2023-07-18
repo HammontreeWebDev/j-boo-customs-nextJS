@@ -23,6 +23,7 @@ const StrepAAwareness = () => {
             .then(() => {
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
+                alert("The Website URL has been copied to your clipboard!")
             })
             .catch((error) => {
                 console.error("Failed to copy URL: ", error);
@@ -39,13 +40,13 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Help Us" whiteTitle=" Fight Back" bodyText={
                         <>
-                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <button className="light-green-text" onClick={handleCopyURL}>sharing</button> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <Link className="light-green-text" href="/donations">donate</Link> directly to the foundation.
+                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <button id="shareBtn" className="light-green-text hoverLink" onClick={handleCopyURL}>sharing</button> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <Link className="light-green-text hoverLink" href="/donations">donate</Link> directly to the foundation.
                             <br></br>
                             <br></br>
                             Your continued support goes a long way in helping the fight against Strep A.
                             <br></br>
                             <br></br>
-                            If you have any concerns or questions, please <Link className="light-green-text" href="/contact_us">contact us</Link>.
+                            If you have any concerns or questions, please <Link className="light-green-text hoverLink" href="/contact_us">contact us</Link>.
                         </>
                     } />
                 </section>
@@ -70,6 +71,8 @@ const StrepAAwareness = () => {
                                 <li>Swollen Lymph Nodes</li>
                             </>
                         } />
+
+                        <small className="light-green-text medical-disclaimer">*Disclaimer: Please do not use the information provided on this page in lieu of a professional medical diagnoses. The information provided is not intended to treat or diagnose a medical condition. However, it is provided in order to spread awareness based on personal experience, therefore, if you or someone you know are experiencing any of the mentioned symptoms and/or are concerned in regard to Group A Strep please contact a medical professional right away to seek treatment. </small>
                 </section>
 
                 {/* Medical Journals Section */}
