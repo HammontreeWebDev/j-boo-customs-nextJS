@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import useNavigation from "../utils/navigationUtils";
 import Link from "next/link";
 
@@ -11,6 +12,22 @@ import StandardCard from "@/components/StandardCard";
 const StrepAAwareness = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyURL = () => {
+        const currentURL = window.location.href;
+        const lastSlashIndex = currentURL.lastIndexOf("/");
+        const trimmedURL = currentURL.substring(0, lastSlashIndex);
+        navigator.clipboard
+            .writeText(trimmedURL)
+            .then(() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+            })
+            .catch((error) => {
+                console.error("Failed to copy URL: ", error);
+            });
+    };
 
     return (
         <>
@@ -22,7 +39,7 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Help Us" whiteTitle=" Fight Back" bodyText={
                         <>
-                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <Link className="light-green-text" href="#">sharing</Link> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <Link className="light-green-text" href="/donations">donate</Link> directly to the foundation.
+                            The Jesse Ryder Brown Foundation exists in order to raise awareness about Strep A. You can help us do that by <button className="light-green-text" onClick={handleCopyURL}>sharing</button> this website with your friends, family and co-workers. Additionally, if you are able to give financially to the foundation, you can also <Link className="light-green-text" href="/donations">donate</Link> directly to the foundation.
                             <br></br>
                             <br></br>
                             Your continued support goes a long way in helping the fight against Strep A.
@@ -37,18 +54,18 @@ const StrepAAwareness = () => {
                 <section className="row">
                     <StandardCard isPageChanging={isPageChanging} greenTitle="Signs &amp;" whiteTitle=" Symptoms" bodyText={
                         <>
-                            Group A Strep is not your normal strep throat infection. Group A Strep lives on the skin and inside the throat. Once inside the bloodstream, Group A Strep can cause a huge amount of issues. 
+                            Group A Strep is not your normal strep throat infection. Group A Strep lives on the skin and inside the throat. Once inside the bloodstream, Group A Strep can cause a huge amount of issues.
                             <br></br>
                             <br></br>
                             With Jesse, it presented as fever, general tiredness, and then progressed to a reddish-purple splotchy rash on his legs. The doctors believe since he sprained his ankle the week prior, the infection began to attack his injured ankle, the weakest part in his body. The rash spread up his legs and he was very cold. He was taken to the hospital the morning the rash was found. The strain of Group A Strep that attacked Jesse was so aggressive that by the time we realized the rash, it was already attacking his major organs, causing sepsis.
                             <br></br>
                             <br></br>
-                            Other symptoms include: 
+                            Other symptoms include:
                             <ul>
                                 <li>Difficulty Breathing</li>
                                 <li>Pain When Swallowing</li>
                                 <li>Swollen Lymph Nodes</li>
-                                </ul>
+                            </ul>
                         </>
                     } />
                 </section>
