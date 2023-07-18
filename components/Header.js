@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // components
 const LoadingDiv = dynamic(() => import("./LoadingDiv"), { ssr: false });
@@ -51,7 +52,6 @@ const Header = (props) => {
 
             <div className="header-content">
 
-
                 <h2 className="h1-header jrb-header">
                     Jesse Ryder Brown Foundation, Inc
                 </h2>
@@ -82,12 +82,8 @@ const Header = (props) => {
 
                     <button onClick={() => props.handleNavigate("/donations")} className="subheading-text nav-btn">Donations</button>
                 </nav>
-                <div className="header-subtext tagline-container">
-                    <p className="header-tagline">
-                        J-Boo Customs Store
-                        <br />
-                        Coming Soon!
-                    </p>
+                <div className="tagline-container">
+                    <Image className="header-tagline" width={200} height={103} src="/img/coming_soon.webp"/>
                 </div>
             </div>
         </header>
