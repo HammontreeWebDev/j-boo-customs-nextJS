@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useNavigation from "../utils/navigationUtils";
 // import Iconify Icons
 import { Icon } from "@iconify/react";
@@ -25,6 +25,54 @@ const IconifyEmail = () => {
 const ContactUs = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
+    const [formValues, setFormValues] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setFormValues((prevValues) => ({
+            ...prevValues,
+            [e.target.name]: e.target.value,
+        }));
+    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('/api/sendEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formValues),
+            });
+
+            if (response.ok) {
+                // Email was sent successfully
+                // TODO: Replace with alert
+                console.log('Email Sent');
+            } else {
+                // Failed to Send email
+                // TODO: Replace with alert
+                console.error('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Failed to send email', error);
+        }
+
+        // Clear out the form values after form is submitted
+        setFormValues({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            message: "",
+        });
+    };
 
     return (
         <>
@@ -52,17 +100,48 @@ const ContactUs = () => {
                         greenText="Contact"
                         whiteText="Form"
                         form={
-                            <form className="contact-form">
+                            <form className="contact-form" onSubmit={handleSubmit}>
 
                                 <div className="form-row">
-                                    <input className="form-input" type="text" placeholder="First Name" />
-                                    <input className="form-input" type="text" placeholder="Last Name" />
-                                    <input className="form-input" type="email" placeholder="youremail@address.com" />
-                                    <input className="form-input" type="tel" placeholder="XXX-XXX-XXXX" />
+                                    <input 
+                                    className="form-input"
+                                    type="text"
+                                    name="firstName"
+                                    value={formValues.firstName}
+                                    onChange={handleChange}
+                                    placeholder="First Name"/>
+
+                                    <input 
+                                    className="form-input"
+                                    type="text"
+                                    name="lastName"
+                                    value={formValues.lastName}
+                                    onChange={handleChange}
+                                    placeholder="Last Name"/>
+
+                                    <input
+                                    className="form-input"
+                                    type="email"
+                                    name="email"
+                                    value={formValues.email}
+                                    onChange={handleChange}
+                                    placeholder="youremail@address.com"/>
+
+                                    <input
+                                    className="form-input"
+                                    type="tel"
+                                    name="phone"
+                                    value={formValues.phone}
+                                    onChange={handleChange}
+                                    placeholder="XXX-XXX-XXXX"/>
                                 </div>
 
                                 <div className="form-row">
-                                    <textarea name="message" placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org" />
+                                    <textarea
+                                    name="message"
+                                    value={formValues.message}
+                                    onChange={handleChange}
+                                    placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org"/>
                                 </div>
 
                                 <button id="submitBtn" type="submit">SEND</button>
