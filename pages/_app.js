@@ -3,6 +3,7 @@ import Head from "next/head";
 
 // css libraries
 import "animate.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 // css files
 import "../styles/index.css";

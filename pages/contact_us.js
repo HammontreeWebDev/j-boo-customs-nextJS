@@ -9,6 +9,7 @@ import PageTitle from "@/components/PageTitle";
 import FancyCard from "@/components/FancyCard";
 import ContactInfo from "@/components/ContactInfo";
 import FormContainer from "@/components/FormContainer";
+import { ToastContainer, toast } from "react-toastify";
 
 const IconifyPhone = () => {
     return (
@@ -25,6 +26,7 @@ const IconifyEmail = () => {
 const ContactUs = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
+    // ! keep track of state for the contact form
     const [formValues, setFormValues] = useState({
         firstName: "",
         lastName: "",
@@ -41,37 +43,68 @@ const ContactUs = () => {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (
+            formValues.firstName !== "" ||
+            formValues.lastName !== "" ||
+            formValues.phone !== "" ||
+            formValues.email !== "" ||
+            formValues.message !== ""
+        ) {
+            console.log(JSON.stringify({ ...formValues }))
+            try {
+                const response = await toast.promise(fetch('/api/sendEmail', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formValues),
+                }),
+                    {
+                        pending: 'Please Wait...',
+                        success: {
+                            render() {
+                                return `
+                                Contact Form Successfully Submitted! 
+                                `
+                            }
+                        },
+                        error: 'There was an issue processing your request!',
+                    }
+                );
 
-        try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formValues),
-            });
+                if (response.ok) {
+                    // Email was sent successfully
+                    console.log('Email Sent');
 
-            if (response.ok) {
-                // Email was sent successfully
-                // TODO: Replace with alert
-                console.log('Email Sent');
-            } else {
-                // Failed to Send email
-                // TODO: Replace with alert
-                console.error('Failed to send email');
+                } else {
+                    // Failed to Send email
+                    console.error('Failed to send email');
+
+                }
+            } catch (error) {
+                console.error('Failed to send email', error); jjjay
             }
-        } catch (error) {
-            console.error('Failed to send email', error);
-        }
 
-        // Clear out the form values after form is submitted
-        setFormValues({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            message: "",
-        });
+            // Clear out the form values after form is submitted
+            setFormValues({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+        } else {
+            // ! Prevent email from being sent and alert failure
+            const waiting = toast.loading("Please Wait...")
+            toast.update(waiting, {
+                render: "Error! Please Fill Out All Required Fields. Thank You.",
+                type: "error",
+                isLoading: false,
+                autoClose: 5000,
+                closeOnClick: true,
+                draggable: true,
+            })
+        }
     };
 
     return (
@@ -103,45 +136,45 @@ const ContactUs = () => {
                             <form className="contact-form" onSubmit={handleSubmit}>
 
                                 <div className="form-row">
-                                    <input 
-                                    className="form-input"
-                                    type="text"
-                                    name="firstName"
-                                    value={formValues.firstName}
-                                    onChange={handleChange}
-                                    placeholder="First Name"/>
-
-                                    <input 
-                                    className="form-input"
-                                    type="text"
-                                    name="lastName"
-                                    value={formValues.lastName}
-                                    onChange={handleChange}
-                                    placeholder="Last Name"/>
+                                    <input
+                                        className="form-input"
+                                        type="text"
+                                        name="firstName"
+                                        value={formValues.firstName}
+                                        onChange={handleChange}
+                                        placeholder="First Name" />
 
                                     <input
-                                    className="form-input"
-                                    type="email"
-                                    name="email"
-                                    value={formValues.email}
-                                    onChange={handleChange}
-                                    placeholder="youremail@address.com"/>
+                                        className="form-input"
+                                        type="text"
+                                        name="lastName"
+                                        value={formValues.lastName}
+                                        onChange={handleChange}
+                                        placeholder="Last Name" />
 
                                     <input
-                                    className="form-input"
-                                    type="tel"
-                                    name="phone"
-                                    value={formValues.phone}
-                                    onChange={handleChange}
-                                    placeholder="XXX-XXX-XXXX"/>
+                                        className="form-input"
+                                        type="email"
+                                        name="email"
+                                        value={formValues.email}
+                                        onChange={handleChange}
+                                        placeholder="youremail@address.com" />
+
+                                    <input
+                                        className="form-input"
+                                        type="tel"
+                                        name="phone"
+                                        value={formValues.phone}
+                                        onChange={handleChange}
+                                        placeholder="XXX-XXX-XXXX" />
                                 </div>
 
                                 <div className="form-row">
                                     <textarea
-                                    name="message"
-                                    value={formValues.message}
-                                    onChange={handleChange}
-                                    placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org"/>
+                                        name="message"
+                                        value={formValues.message}
+                                        onChange={handleChange}
+                                        placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org" />
                                 </div>
 
                                 <button id="submitBtn" type="submit">SEND</button>
@@ -149,7 +182,18 @@ const ContactUs = () => {
                         }
                     />
                 </section>
-
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
             </main>
         </>
     )
