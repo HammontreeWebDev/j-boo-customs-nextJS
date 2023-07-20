@@ -50,9 +50,9 @@ const ContactUs = () => {
             formValues.lastName !== "" &&
             formValues.phone !== "" &&
             formValues.email !== "" &&
-            formValues.message !== ""
+            formValues.message !== "" &&
+            formValues.email.match(/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/)
         ) {
-            console.log(JSON.stringify({ ...formValues }))
             try {
                 const response = await toast.promise(fetch('/api/sendEmail', {
                     method: 'POST',
