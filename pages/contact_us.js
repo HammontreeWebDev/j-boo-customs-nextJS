@@ -49,9 +49,10 @@ const ContactUs = () => {
             formValues.firstName !== "" &&
             formValues.lastName !== "" &&
             formValues.phone !== "" &&
+            formValues.phone.match(/^\d{3}-\d{3}-\d{4}$/) &&
             formValues.email !== "" &&
-            formValues.message !== "" &&
-            formValues.email.match(/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/)
+            formValues.email.match(/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/) &&
+            formValues.message !== ""
         ) {
             try {
                 const response = await toast.promise(fetch('/api/sendEmail', {
