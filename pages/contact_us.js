@@ -37,10 +37,28 @@ const ContactUs = () => {
         message: "",
     });
 
+    // * Auto format phone number
+    const formatPhoneNumber = (input) => {
+        // remove non-numeric characters from the input value
+        const numericValue = input.replace(/\D/g, "");
+
+        // format numeric value into XXX-XXX-XXXX format
+        const formattedValue = numericValue.replace(
+            /^(\d{3})(\d{3})(\d{4})$/,
+            "$1-$2-$3"
+        );
+
+        return formattedValue;
+    };
+
     const handleChange = (e) => {
+
+        // ! Check to see if input type is phone before updating state
+        const value = e.target.name === "phone" ? formatPhoneNumber(e.target.value) : e.target.value;
+
         setFormValues((prevValues) => ({
             ...prevValues,
-            [e.target.name]: e.target.value,
+            [e.target.name]: value,
         }));
     }
     const handleSubmit = async (e) => {
@@ -169,7 +187,9 @@ const ContactUs = () => {
                                         name="phone"
                                         value={formValues.phone}
                                         onChange={handleChange}
-                                        placeholder="XXX-XXX-XXXX" />
+                                        placeholder="XXX-XXX-XXXX"
+                                        pattern="\d{3}-\d{3}-\d{4}"
+                                    />
                                 </div>
 
                                 <div className="form-row">
