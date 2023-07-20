@@ -148,7 +148,7 @@ const ContactUs = () => {
                     />
                 </section>
 
-                <section className="row">
+                <section className="row row-container">
                     <FormContainer
                         isPageChanging={isPageChanging}
                         greenText="Contact"
@@ -157,47 +157,72 @@ const ContactUs = () => {
                             <form className="contact-form" onSubmit={handleSubmit}>
 
                                 <div className="form-row">
-                                    <input
-                                        className="form-input"
-                                        type="text"
-                                        name="firstName"
-                                        value={formValues.firstName}
-                                        onChange={handleChange}
-                                        placeholder="First Name" />
+                                    <div className="input-container">
+                                        <label className="input-label" htmlFor="firstName">
+                                            First Name:
+                                        </label>
+                                        <input
+                                            className="form-input"
+                                            type="text"
+                                            name="firstName"
+                                            value={formValues.firstName}
+                                            onChange={handleChange}
+                                            placeholder="John" />
+                                    </div>
 
-                                    <input
-                                        className="form-input"
-                                        type="text"
-                                        name="lastName"
-                                        value={formValues.lastName}
-                                        onChange={handleChange}
-                                        placeholder="Last Name" />
+                                    <div className="input-container">
+                                        <label className="input-label" htmlFor="lastName">
+                                            Last Name:
+                                        </label>
+                                        <input
+                                            className="form-input"
+                                            type="text"
+                                            name="lastName"
+                                            value={formValues.lastName}
+                                            onChange={handleChange}
+                                            placeholder="Smith" />
+                                    </div>
 
-                                    <input
-                                        className="form-input"
-                                        type="email"
-                                        name="email"
-                                        value={formValues.email}
-                                        onChange={handleChange}
-                                        placeholder="youremail@address.com" />
+                                    <div className="input-container">
+                                        <label className="input-label" htmlFor="email">
+                                            Email Address:
+                                        </label>
+                                        <input
+                                            className="form-input"
+                                            type="email"
+                                            name="email"
+                                            value={formValues.email}
+                                            onChange={handleChange}
+                                            placeholder="example@email.com" />
+                                    </div>
 
-                                    <input
-                                        className="form-input"
-                                        type="tel"
-                                        name="phone"
-                                        value={formValues.phone}
-                                        onChange={handleChange}
-                                        placeholder="XXX-XXX-XXXX"
-                                        pattern="\d{3}-\d{3}-\d{4}"
-                                    />
+                                    <div className="input-container">
+                                        <label className="input-label" htmlFor="phone">
+                                            Phone Number:
+                                        </label>
+                                        <input
+                                            className="form-input"
+                                            type="tel"
+                                            name="phone"
+                                            value={formValues.phone}
+                                            onChange={handleChange}
+                                            placeholder="XXX-XXX-XXXX"
+                                            pattern="\d{3}-\d{3}-\d{4}"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="form-row">
-                                    <textarea
-                                        name="message"
-                                        value={formValues.message}
-                                        onChange={handleChange}
-                                        placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org" />
+                                    <div className="message-container">
+                                        <label className="input-label" htmlFor="message">
+                                            Message:
+                                        </label>
+                                        <textarea
+                                            name="message"
+                                            value={formValues.message}
+                                            onChange={handleChange}
+                                            placeholder="Write your message here...Messages that are sent using this contact form are forwarded to information@j-boocustoms.org" />
+                                    </div>
                                 </div>
 
                                 <button id="submitBtn" type="submit">SEND</button>
