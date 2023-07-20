@@ -44,10 +44,10 @@ const ContactUs = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (
-            formValues.firstName !== "" ||
-            formValues.lastName !== "" ||
-            formValues.phone !== "" ||
-            formValues.email !== "" ||
+            formValues.firstName !== "" &&
+            formValues.lastName !== "" &&
+            formValues.phone !== "" &&
+            formValues.email !== "" &&
             formValues.message !== ""
         ) {
             console.log(JSON.stringify({ ...formValues }))
