@@ -11,11 +11,13 @@ import ContactInfo from "@/components/ContactInfo";
 import FormContainer from "@/components/FormContainer";
 import { ToastContainer, toast } from "react-toastify";
 
-const IconifyPhone = () => {
-    return (
-        < Icon icon="el:phone-alt" />
-    )
-}
+// * Keeping in case client would like to add their phone number in the future
+// const IconifyPhone = () => {
+//     return (
+//         < Icon icon="el:phone-alt" />
+//     )
+// }
+
 const IconifyEmail = () => {
     return (
         <Icon icon="streamline:mail-send-email-send-email-paper-airplane" />
@@ -117,9 +119,9 @@ const ContactUs = () => {
                     <FancyCard isPageChanging={isPageChanging} fancyContainerId="fancy-override" titleColId="title-override" classSelector="contact-container" memberName="Contact Information" memberPhoto={"/img/contact-us-avatar.webp"} photoId="contact-photo" alt="white envelope with a red pencil"
                         contactInfo={
                             <div id="contact-section">
-                                <ContactInfo title="Brad Brown | President" emailIcon={<IconifyEmail />} email="brad@j-boocustoms.org" phoneIcon={<IconifyPhone />} phone="xxx-xxx-xxxx" />
+                                <ContactInfo title="Brad Brown | President" emailIcon={<IconifyEmail />} email="brad@j-boocustoms.org" />
 
-                                <ContactInfo title="Betsy Brown | Vice President" emailIcon={<IconifyEmail />} email="betsy@j-boocustoms.org" phoneIcon={<IconifyPhone />} phone="xxx-xxx-xxxx" />
+                                <ContactInfo title="Betsy Brown | Vice President" emailIcon={<IconifyEmail />} email="betsy@j-boocustoms.org" />
 
                                 <ContactInfo title="General Inquiry" emailIcon={<IconifyEmail />} email="information@j-boocustoms.org" />
                             </div>
