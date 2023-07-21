@@ -83,7 +83,7 @@ const Header = (props) => {
                     <button onClick={() => props.handleNavigate("/donations")} className="subheading-text nav-btn">Donations</button>
                 </nav>
                 <div className="tagline-container">
-                    <Image className="header-tagline" width={200} height={103} src="/img/coming_soon.webp"/>
+                    <Image className="header-tagline" width={200} height={103} src="/img/coming_soon.webp" alt="J-Boo Customs Logo with a store coming soon statement"/>
                 </div>
             </div>
         </header>
