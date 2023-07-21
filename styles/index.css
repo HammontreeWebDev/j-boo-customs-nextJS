@@ -3,6 +3,9 @@
 
 /* ! Note that most of the media queries for global classes are located in the header.css file */
 
+/* ! import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Athiti:wght@400;700&display=swap");
+
 :root {
 
   /* *Color Scheme */
