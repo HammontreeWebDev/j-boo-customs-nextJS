@@ -44,11 +44,11 @@ const Header = (props) => {
 
     return (
         <header className="header-component">
-            <img className="header-shape" src="/img/header-shape.svg" alt="Red Arch to enhance design" />
+            <Image className="header-shape" src="/img/header-shape.svg" alt="Red Arch to enhance design" width={1920} height={500} priority={true}/>
 
             {isImageLoaded ? null : <LoadingDiv />}
 
-            <img id={props.headerImgId} className={props.isPageChanging ? exitClass : headerImageClass} src={props.backgroundImage} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} />
+            <Image id={props.headerImgId} className={props.isPageChanging ? exitClass : headerImageClass} src={props.backgroundImage} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} priority={true} width={1920} height={1234}/>
 
             <div className="header-content">
 

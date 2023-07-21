@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import {Acme, Athiti} from "next/font/google";
 
 // css libraries
 import "animate.css";
@@ -27,6 +28,17 @@ import "../styles/strep_a_awareness.css";
 
 // components
 import Layout from "@/components/Layout";
+
+export const acme = Acme({
+    subsets: ["latin"],
+    weight: "400"
+})
+
+export const athiti = Athiti({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    display: "swap"
+})
 
 const App = ({ Component, pageProps }) => {
     return (
