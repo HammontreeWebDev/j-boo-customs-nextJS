@@ -30,7 +30,7 @@ const Donations = () => {
 
                         </>
                     } customContent={
-                        <Link id="donateBtn" href="https://donate.stripe.com/test_00g8xxgRb20rgyAaEE" target="_blank" rel="noreferrer">Donate</Link>
+                        <Link id="donateBtn" href="https://donate.stripe.com/fZe14CgANfgi5osdQQ" target="_blank" rel="noreferrer">Donate</Link>
                     }
                     />
                 </section>

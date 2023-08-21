@@ -24,6 +24,8 @@
 @media screen and (max-width: 540px) {
     #donateBtn {
         width: 100%;
+        padding: 1% 0% 1% 0%;
         font-size: 18px;
+        text-align: center;
     }
 }
