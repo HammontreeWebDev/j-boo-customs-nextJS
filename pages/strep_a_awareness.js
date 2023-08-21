@@ -7,6 +7,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import StandardCard from "@/components/StandardCard";
+import { ToastContainer, toast } from "react-toastify";
 
 // Strep A Awareness Page | route = /strep_a_awareness
 const StrepAAwareness = () => {
@@ -23,10 +24,12 @@ const StrepAAwareness = () => {
             .then(() => {
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
-                alert("The Website URL has been copied to your clipboard!")
+                // alert("The Website URL has been copied to your clipboard!")
+                toast.success("The Website URL has been copied to your clipboard!")
             })
             .catch((error) => {
                 console.error("Failed to copy URL: ", error);
+                toast.warning("Failed to copy URL: ", error);
             });
     };
 
@@ -87,6 +90,18 @@ const StrepAAwareness = () => {
                         </>
                     } />
                 </section> */}
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
             </main>
         </>
     )
