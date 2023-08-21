@@ -1,20 +1,28 @@
 .gallery-photo {
-    width: 30%;
-    margin-bottom: 6%;
+    margin-bottom: 1.5%;
     object-fit: cover;
     object-position: 50% 50%;
 }
 
 /* media queries to change how much space each img takes on page at diff breakpoints */
 
+@media screen and (max-width: 930px) {
+    .gallery-photo{
+        max-width: 33%;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 503px) {
     .gallery-photo {
-        width: 49%;
+        max-width: 49%;
+        height: auto;
     }
 }
 
 @media screen and (max-width: 320px) {
     .gallery-photo {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 }

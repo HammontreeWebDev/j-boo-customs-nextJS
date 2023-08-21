@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // components 
 const LoadSpinner = dynamic(() => import("./LoadSpinner"), {ssr: false});
@@ -26,7 +27,7 @@ const GalleryPhoto = (props) => {
     return(
         <>
         {isImageLoaded ? null : <LoadSpinner />}
-        <img className={props.isPageChanging ? exitClass : initialClass} src={props.src} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad}/>
+        <Image className={props.isPageChanging ? exitClass : initialClass} src={props.src} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} width={400} height={400}/>
         </>
     )
 }
