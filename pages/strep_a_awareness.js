@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import StandardCard from "@/components/StandardCard";
 import { ToastContainer, toast } from "react-toastify";
+import Head from "next/head";
 
 // Strep A Awareness Page | route = /strep_a_awareness
 const StrepAAwareness = () => {
@@ -35,6 +36,9 @@ const StrepAAwareness = () => {
 
     return (
         <>
+        <Head>
+            <title>Strep A Awareness | Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header backgroundImage={"/img/awareness-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Strep A" greenText="Awareness" />
             <main>

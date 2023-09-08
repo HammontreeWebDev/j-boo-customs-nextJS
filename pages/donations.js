@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import ContentCard from "@/components/ContentCard";
 import Link from "next/link";
+import Head from "next/head";
 
 // Donations Page | route = /donations
 const Donations = () => {
@@ -14,6 +15,9 @@ const Donations = () => {
 
     return (
         <>
+        <Head>
+            <title>Donations | Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header backgroundImage={"/img/donations_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Donate" greenText="Now" />
             <main>

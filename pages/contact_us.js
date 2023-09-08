@@ -10,6 +10,7 @@ import FancyCard from "@/components/FancyCard";
 import ContactInfo from "@/components/ContactInfo";
 import FormContainer from "@/components/FormContainer";
 import { ToastContainer, toast } from "react-toastify";
+import Head from "next/head";
 
 // * Keeping in case client would like to add their phone number in the future
 // const IconifyPhone = () => {
@@ -130,6 +131,9 @@ const ContactUs = () => {
 
     return (
         <>
+        <Head>
+            <title>Contact Us | Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header backgroundImage={"/img/contact-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Contact" greenText="Us" />
             <main>

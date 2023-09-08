@@ -5,6 +5,7 @@ import useNavigation from "../utils/navigationUtils";
 import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import Jesse from "@/components/Jesse";
+import Head from "next/head";
 
 // Jesse"s Story Page | route = /jesses_story
 const JessesStory = () => {
@@ -13,6 +14,9 @@ const JessesStory = () => {
 
     return (
         <>
+        <Head>
+            <title>Jesse&apos;s Story | Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header headerImgId="story-header" backgroundImage={"/img/story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />
             <main>

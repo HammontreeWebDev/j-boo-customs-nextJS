@@ -6,6 +6,7 @@ import GalleryPhoto from "@/components/GalleryPhoto";
 import PageTitle from "@/components/PageTitle";
 import Header from "@/components/Header";
 import LoadSpinner from "@/components/LoadSpinner";
+import Head from "next/head";
 
 const Landing = () => {
     // ! keep track of state using helper function to fire exit animations
@@ -21,6 +22,9 @@ const Landing = () => {
 
     return (
         <>
+        <Head>
+            <title>Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header headerImgId="landing-header" backgroundImage="/img/landing_header.webp" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Jesse with his motocross bike" />
             <PageTitle isPageChanging={isPageChanging} whiteText="&quot;Remembering, Preventing, and Healing:" greenText="Together Against Strep A&quot;" />
             <main>

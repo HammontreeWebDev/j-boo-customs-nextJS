@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import ContentCard from "@/components/ContentCard";
 import FancyCard from "@/components/FancyCard";
+import Head from "next/head";
 
 
 // About Us Page located at /about_us
@@ -15,6 +16,9 @@ const AboutUs = () => {
 
     return (
         <>
+        <Head>
+            <title>About Us | Jesse Ryder Brown Foundation</title>
+        </Head>
             <Header backgroundImage={"/img/about-us-final.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate}/>
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />
             <main>
