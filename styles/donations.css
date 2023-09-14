@@ -21,6 +21,11 @@
     flex-direction: column;
 }
 
+#donationHeader{
+    object-fit: cover;
+    object-position: 50% 65%;
+}
+
 @media screen and (max-width: 540px) {
     #donateBtn {
         width: 100%;

@@ -8,6 +8,8 @@ import ContentCard from "@/components/ContentCard";
 import Link from "next/link";
 import Head from "next/head";
 
+// Photo Credit - Donations Header: Photo by Liza Summer: https://www.pexels.com/photo/crop-anonymous-person-showing-donation-box-6348119/
+
 // Donations Page | route = /donations
 const Donations = () => {
     // ! keep track of state using helper function to fire exit animations
@@ -18,7 +20,7 @@ const Donations = () => {
         <Head>
             <title>Donations | Jesse Ryder Brown Foundation</title>
         </Head>
-            <Header backgroundImage={"/img/donations_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header headerImgId="donationHeader" backgroundImage={"/img/stock-donations.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Donate" greenText="Now" />
             <main>
                 <section className="row">
