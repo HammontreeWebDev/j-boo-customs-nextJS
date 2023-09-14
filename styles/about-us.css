@@ -1,0 +1,6 @@
+@media screen and (max-width: 900px) {
+    #aboutUsHeader{
+        object-fit: cover;
+        object-position: 100% 60%;
+    }
+}

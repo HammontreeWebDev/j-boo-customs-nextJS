@@ -6,6 +6,7 @@ import "animate.css";
 import 'react-toastify/dist/ReactToastify.css';
 
 // css files
+import "../styles/about-us.css";
 import "../styles/index.css";
 import "../styles/contact-info.css";
 import "../styles/contactus.css";
