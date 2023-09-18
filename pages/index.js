@@ -28,6 +28,7 @@ const Landing = () => {
             name="description" 
             content="Remembering, Preventing, and Healing: Together Against Strep A. | Welcome to the Jesse Ryder Brown Foundation. Take your time to learn about the Brown family and join their fight against Strep A."
             />
+            <meta name="keywords" content="Jesse Brown, Jesse Ryder Brown Foundation, Strep A" />
         </Head>
             <Header headerImgId="landing-header" backgroundImage="/img/landing_header.webp" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Jesse with his motocross bike" />
             <PageTitle isPageChanging={isPageChanging} whiteText="&quot;Remembering, Preventing, and Healing:" greenText="Together Against Strep A&quot;" />

@@ -23,6 +23,7 @@ const Donations = () => {
             name="description" 
             content="Donate Today. A secure payment portal powered by Stripe is available for you to make a Donation to the Jesse Ryder Brown foundation. Let&apos;s make a difference together."
             />
+            <meta name="keywords" content="Jesse Brown, Jesse Ryder Brown Foundation, Strep A, donations, non-profit" />
         </Head>
             <Header headerImgId="donationHeader" backgroundImage={"/img/stock-donations.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="donation box"/>
             <PageTitle isPageChanging={isPageChanging} whiteText="Donate" greenText="Now" />

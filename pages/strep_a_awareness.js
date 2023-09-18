@@ -42,6 +42,7 @@ const StrepAAwareness = () => {
             name="description" 
             content="Take a deep dive into the ways that you can help the Jesse Ryder Brown Foundation fight back and learn the signs and symptoms of Strep A."
             />
+            <meta name="keywords" content="Jesse Brown, Jesse Ryder Brown Foundation, Strep A" />
         </Head>
             <Header backgroundImage={"/img/awareness-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Doctor looking through microscope"/>
             <PageTitle isPageChanging={isPageChanging} whiteText="Strep A" greenText="Awareness" />

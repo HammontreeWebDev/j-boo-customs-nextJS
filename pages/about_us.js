@@ -41,6 +41,7 @@ const AboutUs = () => {
                     name="description"
                     content="Learn more about The Jesse Ryder Brown Foundation and meet the faces behind the Non-Profit Organization."
                 />
+                <meta name="keywords" content="Jesse Brown, Jesse Ryder Brown Foundation, Strep A, about" />
             </Head>
             <Header headerImgId="aboutUsHeader" backgroundImage={backgroundImage} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Two pictures of the Brown Family." />
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />

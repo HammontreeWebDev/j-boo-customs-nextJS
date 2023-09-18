@@ -137,6 +137,7 @@ const ContactUs = () => {
             name="description" 
             content="Reach out to the Jesse Ryder Brown Foundation via the integrated contact form for questions or concerns."
             />
+            <meta name="keywords" content="Jesse Brown, Jesse Ryder Brown Foundation, Strep A, contact" />
         </Head>
             <Header backgroundImage={"/img/contact-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Hand holding a cell phone"/>
             <PageTitle isPageChanging={isPageChanging} whiteText="Contact" greenText="Us" />
