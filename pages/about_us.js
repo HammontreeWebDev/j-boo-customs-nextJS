@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useNavigation from "../utils/navigationUtils";
 
 // import components
@@ -14,16 +14,34 @@ const AboutUs = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
 
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    const handleWindowResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowResize);
+        setWindowWidth(window.innerWidth);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    }, []);
+
+    const backgroundImage =
+        windowWidth <= 800 ? "/img/single-about-us-header.webp" : "/img/custom-aboutUs.webp";
+
     return (
         <>
-        <Head>
-            <title>About Us | Jesse Ryder Brown Foundation</title>
-            <meta 
-            name="description" 
-            content="Learn more about The Jesse Ryder Brown Foundation and meet the faces behind the Non-Profit Organization."
-            />
-        </Head>
-            <Header headerImgId="aboutUsHeader" backgroundImage={"/img/custom-aboutUs.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Two pictures of the Brown Family."/>
+            <Head>
+                <title>About Us | Jesse Ryder Brown Foundation</title>
+                <meta
+                    name="description"
+                    content="Learn more about The Jesse Ryder Brown Foundation and meet the faces behind the Non-Profit Organization."
+                />
+            </Head>
+            <Header headerImgId="aboutUsHeader" backgroundImage={backgroundImage} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Two pictures of the Brown Family." />
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />
             <main>
                 {/* Who we Are */}
@@ -40,7 +58,7 @@ const AboutUs = () => {
                     <FancyCard isPageChanging={isPageChanging} classSelector="text-col fancy-text" memberName="Brad Brown | President"
                         memberPhoto={"/img/brad-avatar4x.webp"} alt="Brad Brown | President"
                         aboutText={<>
-                           Brad is one of the most kind-hearted people you will meet. He is caring and genuine and his son and wife came before everything else. He is a family man through and through. When Jesse competed in BMX, Brad also competed in the local district racing with him. When Jesse was done with BMX, Brad followed him to the Florida Trail Riding series as well on his four wheeler. Nothing made Brad happier than riding with his son and seeing his son doing what he loved to do.
+                            Brad is one of the most kind-hearted people you will meet. He is caring and genuine and his son and wife came before everything else. He is a family man through and through. When Jesse competed in BMX, Brad also competed in the local district racing with him. When Jesse was done with BMX, Brad followed him to the Florida Trail Riding series as well on his four wheeler. Nothing made Brad happier than riding with his son and seeing his son doing what he loved to do.
                         </>} />
                 </section>
 
