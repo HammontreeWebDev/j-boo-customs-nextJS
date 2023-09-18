@@ -38,6 +38,10 @@ const StrepAAwareness = () => {
         <>
         <Head>
             <title>Strep A Awareness | Jesse Ryder Brown Foundation</title>
+            <meta 
+            name="description" 
+            content="Take a deep dive into the ways that you can help the Jesse Ryder Brown Foundation fight back and learn the signs and symptoms of Strep A."
+            />
         </Head>
             <Header backgroundImage={"/img/awareness-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Strep A" greenText="Awareness" />

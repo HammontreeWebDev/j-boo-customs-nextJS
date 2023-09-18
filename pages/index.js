@@ -26,7 +26,7 @@ const Landing = () => {
             <title>Jesse Ryder Brown Foundation</title>
             <meta 
             name="description" 
-            content="Welcome to the Jesse Ryder Brown Foundation. Take your time to learn about the Brown family and join their fight against Strep A."
+            content="Remembering, Preventing, and Healing: Together Against Strep A. | Welcome to the Jesse Ryder Brown Foundation. Take your time to learn about the Brown family and join their fight against Strep A."
             />
         </Head>
             <Header headerImgId="landing-header" backgroundImage="/img/landing_header.webp" isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Jesse with his motocross bike" />

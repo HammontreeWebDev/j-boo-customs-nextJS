@@ -16,6 +16,10 @@ const JessesStory = () => {
         <>
         <Head>
             <title>Jesse&apos;s Story | Jesse Ryder Brown Foundation</title>
+            <meta 
+            name="description" 
+            content="Read Jesse&apos;s Story Here. Find out the reason behind the organization and learn what you can do to help."
+            />
         </Head>
             <Header headerImgId="story-header" backgroundImage={"/img/story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />

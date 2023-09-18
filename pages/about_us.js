@@ -18,6 +18,10 @@ const AboutUs = () => {
         <>
         <Head>
             <title>About Us | Jesse Ryder Brown Foundation</title>
+            <meta 
+            name="description" 
+            content="Learn more about The Jesse Ryder Brown Foundation and meet the faces behind the Non-Profit Organization."
+            />
         </Head>
             <Header headerImgId="aboutUsHeader" backgroundImage={"/img/custom-aboutUs.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate}/>
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />

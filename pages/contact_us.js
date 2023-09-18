@@ -133,6 +133,10 @@ const ContactUs = () => {
         <>
         <Head>
             <title>Contact Us | Jesse Ryder Brown Foundation</title>
+            <meta 
+            name="description" 
+            content="Reach out to the Jesse Ryder Brown Foundation via the integrated contact form for questions or concerns."
+            />
         </Head>
             <Header backgroundImage={"/img/contact-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
             <PageTitle isPageChanging={isPageChanging} whiteText="Contact" greenText="Us" />
