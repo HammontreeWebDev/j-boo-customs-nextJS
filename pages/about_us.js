@@ -23,7 +23,7 @@ const AboutUs = () => {
             content="Learn more about The Jesse Ryder Brown Foundation and meet the faces behind the Non-Profit Organization."
             />
         </Head>
-            <Header headerImgId="aboutUsHeader" backgroundImage={"/img/custom-aboutUs.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate}/>
+            <Header headerImgId="aboutUsHeader" backgroundImage={"/img/custom-aboutUs.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Two pictures of the Brown Family."/>
             <PageTitle isPageChanging={isPageChanging} whiteText="About" greenText="Us" />
             <main>
                 {/* Who we Are */}
