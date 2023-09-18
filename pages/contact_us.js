@@ -138,7 +138,7 @@ const ContactUs = () => {
             content="Reach out to the Jesse Ryder Brown Foundation via the integrated contact form for questions or concerns."
             />
         </Head>
-            <Header backgroundImage={"/img/contact-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header backgroundImage={"/img/contact-us-header.png"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Hand holding a cell phone"/>
             <PageTitle isPageChanging={isPageChanging} whiteText="Contact" greenText="Us" />
             <main>
                 {/* id props to override css for about me classes */}
