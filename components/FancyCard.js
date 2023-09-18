@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import useImageLoading from "../utils/imageLoadingUtils";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // components
 const LoadSpinner = dynamic(() => import("./LoadSpinner"), {ssr: false});
@@ -33,7 +34,7 @@ const FancyCard = (props) => {
                 <h2 className="card-title reset-margin about-us-title">
                     {props.memberName}
                 </h2>
-                <img id={props.photoId} className={imgClass} src={props.memberPhoto} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} />
+                <Image id={props.photoId} className={imgClass} src={props.memberPhoto} alt={props.alt} onLoad={handleImageLoad} onLoadedData={handleImageLoad} width={285} height={285}/>
                 {isImageLoaded ? null : <LoadSpinner />}
             </div>
 
