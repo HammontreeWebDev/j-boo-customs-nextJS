@@ -21,7 +21,7 @@ const JessesStory = () => {
             content="Read Jesse&apos;s Story Here. Find out the reason behind the organization and learn what you can do to help."
             />
         </Head>
-            <Header headerImgId="story-header" backgroundImage={"/img/story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} />
+            <Header headerImgId="story-header" backgroundImage={"/img/story_header.webp"} isPageChanging={isPageChanging} handleNavigate={handleNavigate} alt="Picture of Jesse Brown with his dirt bike"/>
             <PageTitle isPageChanging={isPageChanging} whiteText="Jesse&apos;s" greenText="Story" />
             <main>
                 <section className="row">
