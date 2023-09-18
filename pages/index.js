@@ -42,6 +42,11 @@ const Landing = () => {
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo7.webp" alt="jesse riding his bmx bike in a race" />
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo8.webp" alt="Jesse on his bmx bike in full gear" />
                     <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing-photo9.webp" alt="Close up of Jesse with dirt on his face from riding" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing_photo10.webp" alt="Memorial Plaque" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing_photo11.webp" alt="Memorial Plaque" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing_photo12.webp" alt="Memorial Plaque" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing_photo13.webp" alt="Memorial Plaque" />
+                    <GalleryPhoto isPageChanging={isPageChanging} src="/img/landing_photo14.webp" alt="Memorial Plaque" />
                 </section>
             </main>
         </>
