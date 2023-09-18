@@ -14,6 +14,7 @@ const AboutUs = () => {
     // ! keep track of state using helper function to fire exit animations
     const { isPageChanging, handleNavigate } = useNavigation();
 
+    // ! listen for window width changes so we only use 1 picture in the header for mobile version of the website
     const [windowWidth, setWindowWidth] = useState(0);
 
     const handleWindowResize = () => {
