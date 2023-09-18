@@ -58,7 +58,7 @@ const Header = (props) => {
 
 
 
-                <button className={isNavCollapsed ? "toggle-nav-button" : "close-nav-button"} onClick={() => setIsNavCollapsed(!isNavCollapsed)}>
+                <button id="toggle-button" aria-label="dropdown" className={isNavCollapsed ? "toggle-nav-button" : "close-nav-button"} onClick={() => setIsNavCollapsed(!isNavCollapsed)}>
                     {isNavCollapsed ? (
                         <Icon icon="line-md:close-to-menu-alt-transition" />
                     ) : (
