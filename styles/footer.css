@@ -67,3 +67,21 @@
         height: 25vh;
     }
 }
+
+@media screen and (max-width: 414px) {
+   .copyright {
+    font-size: 0.85rem;
+   }
+}
+
+@media screen and (max-width: 352px) {
+    .copyright {
+     font-size: 0.8rem;
+    }
+ }
+
+ @media screen and (max-width: 331px) {
+    .copyright {
+     font-size: 0.75rem;
+    }
+ }
